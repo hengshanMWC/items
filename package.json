@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "packageManager": "pnpm@7.21.0",
   "license": "MIT",
+  "type": "module",
   "homepage": "https://github.com/hengshanMWC/items#readme",
   "repository": {
     "type": "git",
@@ -18,10 +19,7 @@
   },
   "scripts": {
     "release": "esno ./scripts/release",
-    "build": "vite build && npm run type",
-    "type": "tsc",
-    "test": "vitest",
-    "test:cov": "vitest --coverage",
+    "build": "vite build && tsc",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
     "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
     "docs:dev": "vitepress dev docs",
@@ -42,10 +40,10 @@
     "husky": "^7.0.4",
     "inquirer": "^9.1.4",
     "lint-staged": "^12.3.4",
+    "ora": "^6.1.2",
     "typescript": "^4.5.5",
-    "vite": "^3.2.4",
-    "vitepress": "1.0.0-alpha.29",
-    "vitest": "^0.26.3"
+    "vite": "^4.0.4",
+    "vitepress": "1.0.0-alpha.29"
   },
   "lint-staged": {
     "{server,client}/*.{js,ts,json,md,tsx}": "pnpm lint"
