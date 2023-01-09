@@ -1,19 +1,19 @@
 import simpleGit from 'simple-git'
-import {
-  clone,
-  templateList,
-} from '../dist/items.js'
 import colors from 'colors'
 import ora from 'ora'
+import { templateList } from './list'
+
 function clone(address: string, name?: string) {
   const cmds = ['clone', address]
   if (name) cmds.push('name')
   return simpleGit().raw(cmds)
 }
-export async function createTemplate (choice: string, name?: string) {
+
+async function createTemplate (choice: string, name?: string) {
   const spinner = ora('Pulling template').start();
+  const item = templateList.find(item => choice === item.name) || templateList[0]
   try {
-    await clone(templateList.find(item => choice === item.name).address, name)
+    await clone(item.address, name)
     console.log(colors.cyan.bold('create success'))
     console.log(`cd ${name || choice}`)
     console.log('pnpm i')
@@ -22,4 +22,8 @@ export async function createTemplate (choice: string, name?: string) {
   } finally {
     spinner.stop()
   }
+}
+
+export {
+  createTemplate
 }
