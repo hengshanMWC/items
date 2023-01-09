@@ -8,7 +8,9 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: [...builtinModules],
+      external: [
+        ...builtinModules
+      ],
     },
   },
   resolve: {

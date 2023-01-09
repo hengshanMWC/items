@@ -8,7 +8,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     'curly': 'off',
-    //; 希望打开的
+    // 希望打开的
     'prefer-promise-reject-errors': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
   },
