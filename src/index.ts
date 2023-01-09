@@ -1,3 +1,2 @@
-export function demo() {
-  return 'demo'
-}
+export * from '@/list'
+export * from '@/git'
