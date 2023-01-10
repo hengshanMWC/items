@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { dirname, resolve } from 'path'
-import { fileURLToPath } from 'url'
+import { resolve } from 'path'
 import { program } from 'commander'
 import inquirer from 'inquirer'
 import fs from 'fs-extra'
