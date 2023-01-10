@@ -4,10 +4,10 @@ import { fileURLToPath } from 'url'
 import { program } from 'commander'
 import inquirer from 'inquirer'
 import fs from 'fs-extra'
-import { createTemplate, templateList } from '../dist/items.js'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-const pkg = await fs.readJSON(resolve(__dirname, '../package.json'))
+import ora from 'ora'
+import colors from 'colors'
+import { createTemplate, getDirname, templateList } from '../dist/items.js'
+const pkg = await fs.readJSON(resolve(getDirname(), '../package.json'))
 program
   .version(pkg.version)
   .description('Create item Template')
@@ -23,6 +23,9 @@ program
         choices: templateList.map(item => item.name),
       },
     ])
-    createTemplate(answer.create, name || answer.create)
+    const templateName = name || answer.create
+    const spinner = ora(`☕ Pulling template ${colors.bold(`[${templateName}]`)}`).start()
+    await createTemplate(answer.create, name || templateName)
+    spinner.stop()
   })
 program.parse(process.argv)
