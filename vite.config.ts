@@ -1,21 +1,21 @@
-import { resolve } from "path";
-import { builtinModules } from "module";
-import { defineConfig } from "vite";
+import { resolve } from 'path'
+import { builtinModules } from 'module'
+import { defineConfig } from 'vite'
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "./src/index.ts"),
-      formats: ["es"],
+      entry: resolve(__dirname, './src/index.ts'),
+      formats: ['es'],
     },
     rollupOptions: {
       external: [
-        ...builtinModules
+        ...builtinModules,
       ],
     },
   },
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
+      '@': resolve(__dirname, './src'),
     },
   },
-});
+})
