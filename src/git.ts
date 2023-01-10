@@ -1,6 +1,7 @@
+import { execSync } from 'child_process'
+import { resolve } from 'path'
 import simpleGit from 'simple-git'
 import colors from 'colors'
-// import ora from 'ora'
 import { templateList } from './list'
 
 function clone(address: string, name: string) {
@@ -8,19 +9,22 @@ function clone(address: string, name: string) {
   return simpleGit().raw(cmd)
 }
 
+function install(name: string) {
+  execSync('pnpm i', { stdio: 'inherit', cwd: resolve(process.cwd(), name) })
+}
+
 async function createTemplate(choice: string, name: string) {
-  // const spinner = ora('Pulling template').start()
   const item = templateList.find(item => choice === item.name) || templateList[0]
   try {
     await clone(item.address, name)
-    console.log(colors.cyan.bold('create success'))
-    console.log(`cd ${name || choice} && pnpm i`)
+    console.log('\n')
+    console.log(colors.cyan.bold('📦 The pull is complete and the dependencies are installed'))
+    install(name)
+    console.log(colors.cyan.bold('🍾 created'))
+    console.log(colors.cyan.bold(`cd ${name}`))
   }
   catch (err) {
     console.log(colors.red.bold(err.message))
-  }
-  finally {
-    // spinner.stop()
   }
 }
 

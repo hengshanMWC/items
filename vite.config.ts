@@ -16,8 +16,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
-      '#ansi-styles': './node_modules/.pnpm/chalk@5.2.0/node_modules/chalk/source/vendor/ansi-styles/index.js',
-      '#supports-color': './node_modules/.pnpm/chalk@5.2.0/node_modules/chalk/source/vendor/supports-color/index.js',
+      // '#ansi-styles': resolve(__dirname, './node_modules/.pnpm/chalk@5.2.0/node_modules/chalk/source/vendor/ansi-styles/index.js'),
+      // '#supports-color': resolve(__dirname, './node_modules/.pnpm/chalk@5.2.0/node_modules/chalk/source/vendor/supports-color/index.js'),
     },
   },
 })
