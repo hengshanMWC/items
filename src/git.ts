@@ -1,16 +1,11 @@
-import { execSync } from 'child_process'
-import { resolve } from 'path'
 import simpleGit from 'simple-git'
 import colors from 'colors'
 import { templateList } from './list'
+import { install } from './utils'
 
 function clone(address: string, name: string) {
   const cmd = ['clone', address, name]
   return simpleGit().raw(cmd)
-}
-
-function install(name: string) {
-  execSync('pnpm i', { stdio: 'inherit', cwd: resolve(process.cwd(), name) })
 }
 
 async function createTemplate(choice: string, name: string) {
