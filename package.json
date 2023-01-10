@@ -12,8 +12,7 @@
   "bugs": {
     "url": "https://github.com/hengshanMWC/items/issues"
   },
-  "main": "dist/items.umd.js",
-  "module": "dist/items.mjs",
+  "main": "dist/items.js",
   "bin": {
     "items": "bin/index.js"
   },
