@@ -23,6 +23,6 @@ program
         choices: templateList.map(item => item.name),
       },
     ])
-    createTemplate(answer.create, name)
+    createTemplate(answer.create, name || answer.create)
   })
 program.parse(process.argv)
