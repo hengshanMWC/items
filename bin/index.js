@@ -5,7 +5,7 @@ import inquirer from 'inquirer'
 import fs from 'fs-extra'
 import ora from 'ora'
 import colors from 'colors'
-import { createTemplate, getDirname, templateList } from '../dist/items.js'
+import { createTemplate, getDirname, install, templateList } from '../dist/items.js'
 const pkg = await fs.readJSON(resolve(getDirname(), '../package.json'))
 program
   .version(pkg.version)
@@ -24,7 +24,11 @@ program
     ])
     const templateName = name || answer.create
     const spinner = ora(`☕ Pulling template ${colors.bold(`[${templateName}]`)}`).start()
-    await createTemplate(answer.create, name || templateName)
+    const nameValue = await createTemplate(answer.create, name || templateName)
     spinner.stop()
+    console.log(colors.cyan.bold('📦 The pull is complete and the dependencies are installed'))
+    install(nameValue)
+    console.log(colors.cyan.bold('🍾 created'))
+    console.log(colors.cyan.bold(`cd ${nameValue}`))
   })
 program.parse(process.argv)
