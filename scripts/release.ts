@@ -20,7 +20,7 @@ console.log(`${colors.cyan.bold('release: start')} 🏗`);
   execSync('npm run build', { stdio: 'inherit' })
   // await versionBump()
   execSync(`git tag v${pkg.version}`, { stdio: 'inherit' })
-  execSync('npm run publish', { stdio: 'inherit' })
+  execSync('npm publish --access public', { stdio: 'inherit' })
   execSync('git push origin HEAD', { stdio: 'inherit' })
 })()
 console.log(`${colors.cyan.bold('release: success')} 🎉🎉🎉🎉🎊`)
