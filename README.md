@@ -1,33 +1,10 @@
 # introduce
-- [x] vite :package:
-- [x] vitest :sheep:
-- [x] typescript :alien:
-- [x] eslint、husky :flashlight:
-
-# init
-
+Create templates easily。Support typescript、vite、vitest、eslint...
+- [x] item
+- [x] monorepo: lerna
+# install
 ```
-git clone https://github.com/hengshanMWC/items.git
-cd items
-pnpm i
+npm i -g @abmao/items
+items create [name]
 ```
-
-# publish test
-
-next, simulate the publish process
-
-## build local NPM source
-
-```
-npm install -g verdaccio
-verdaccio
-```
-
-Of course, if you want to use it formally, please modify it `.npmrc`
-
-If you want some of the packages to specify NPM source, you can modify the package Publishconfig. JSON registry
-
-## release
-```
-npm run release
-```
+![run](./assets/img/demo.png)
