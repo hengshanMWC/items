@@ -6,12 +6,12 @@ import { fileURLToPath } from 'url';
 import { templateList } from './list'
 import { createTemplate } from './git'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const pkg = await fs.readJSON(resolve(__dirname, '../package.json'))
 
 
-export function cliMain () {
+export async function cliMain (argv: NodeJS.Process['argv']) {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
+  const pkg = await fs.readJSON(resolve(__dirname, '../package.json'))
   program
     .version(pkg.version)
     .description('Create item Template')
@@ -29,5 +29,5 @@ export function cliMain () {
       ])
       createTemplate(answer.create, name)
     })
-  program.parse(process.argv)
+  program.parse(argv)
 }
