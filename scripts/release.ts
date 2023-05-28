@@ -17,7 +17,7 @@ console.log(`${colors.cyan.bold('release: start')} 🏗`);
   execSync('pnpm i', { stdio: 'inherit' })
   // execSync('npm run test', { stdio: 'inherit' })
   execSync('npm run build', { stdio: 'inherit' })
-  execSync('npm publish --access public', { stdio: 'inherit' })
+  execSync('npm run publish', { stdio: 'inherit' })
   execSync(`git tag v${pkg.version}`, { stdio: 'inherit' })
   execSync('git push origin HEAD', { stdio: 'inherit' })
 })()
