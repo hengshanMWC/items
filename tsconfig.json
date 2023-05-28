@@ -8,7 +8,6 @@
     "moduleResolution": "node",
     "declaration": true,
     "declarationDir": "typings",
-    "emitDeclarationOnly": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "noImplicitAny": false,
@@ -20,10 +19,9 @@
     "target": "esnext",
     "lib": ["DOM", "ESNext"],
     "downlevelIteration": true,
-    "suppressImplicitAnyIndexErrors": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   }
 }

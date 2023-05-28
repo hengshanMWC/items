@@ -11,13 +11,13 @@
   "bugs": {
     "url": "https://github.com/hengshanMWC/items/issues"
   },
-  "main": "dist/items.js",
+  "main": "dist/index.js",
   "bin": {
     "items": "bin/index.js"
   },
   "scripts": {
     "release": "esno ./scripts/release",
-    "build": "vite build && tsc",
+    "build": "webpack --config ./webpack.config.js",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
     "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
     "docs:dev": "vitepress dev docs",
@@ -36,9 +36,12 @@
     "esno": "^0.16.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
-    "typescript": "^4.5.5",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
     "vite": "^4.3.9",
-    "vitepress": "1.0.0-alpha.29"
+    "vitepress": "1.0.0-alpha.29",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
   },
   "lint-staged": {
     "{server,client}/*.{js,ts,json,md,tsx}": "pnpm lint"
