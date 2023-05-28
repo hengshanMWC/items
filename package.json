@@ -1,7 +1,7 @@
 {
   "name": "items",
   "version": "0.0.1",
-  "packageManager": "pnpm@7.21.0",
+  "packageManager": "pnpm@8.5.1",
   "license": "MIT",
   "type": "module",
   "homepage": "https://github.com/hengshanMWC/items#readme",
@@ -12,8 +12,7 @@
   "bugs": {
     "url": "https://github.com/hengshanMWC/items/issues"
   },
-  "main": "dist/items.umd.js",
-  "module": "dist/items.mjs",
+  "main": "dist/items.js",
   "bin": {
     "items": "bin/index.js"
   },
@@ -33,12 +32,9 @@
     "@types/node": "^18.11.18",
     "@typescript-eslint/parser": "^5.12.0",
     "@vitest/coverage-c8": "^0.26.3",
-    "colors": "^1.4.0",
-    "commander": "^9.5.0",
     "eslint": "^8.9.0",
     "esno": "^0.16.3",
     "husky": "^7.0.4",
-    "inquirer": "^9.1.4",
     "lint-staged": "^12.3.4",
     "ora": "^6.1.2",
     "typescript": "^4.5.5",
@@ -49,7 +45,10 @@
     "{server,client}/*.{js,ts,json,md,tsx}": "pnpm lint"
   },
   "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^10.0.1",
     "fs-extra": "^11.1.0",
+    "inquirer": "^9.2.6",
     "simple-git": "^3.15.1"
   }
 }
