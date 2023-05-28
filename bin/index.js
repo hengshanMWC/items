@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 const {
   cliMain,
-} = require('../dist/items.min')
+} = require('../dist/items.mjs')
 cliMain(process.argv)

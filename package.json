@@ -17,7 +17,6 @@
   },
   "scripts": {
     "release": "esno ./scripts/release",
-    "publish": "npm publish --access public",
     "build": "vite build && tsc",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
     "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
