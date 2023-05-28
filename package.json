@@ -19,10 +19,7 @@
     "release": "esno ./scripts/release",
     "build": "webpack --config ./webpack.config.js",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
-    "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx ."
   },
   "devDependencies": {
     "@antfu/eslint-config-ts": "^0.30.1",
@@ -30,16 +27,12 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@types/node": "^18.11.18",
     "@typescript-eslint/parser": "^5.12.0",
-    "@vitest/coverage-c8": "^0.26.3",
-    "bumpp": "^9.1.0",
     "eslint": "^8.9.0",
     "esno": "^0.16.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "ts-loader": "^9.4.3",
     "typescript": "^5.0.4",
-    "vite": "^4.3.9",
-    "vitepress": "1.0.0-alpha.29",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1"
   },
