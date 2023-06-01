@@ -14,8 +14,6 @@ import colors from 'colors'
 import pkg from '../package.json'
 console.log(`${colors.cyan.bold('release: start')} 🏗`);
 (async function () {
-  // 为了防止每次子包没有更新到pnpm-lock，报frozen-lockfile
-  execSync('pnpm i', { stdio: 'inherit' })
   // execSync('npm run test', { stdio: 'inherit' })
   execSync('npm run build', { stdio: 'inherit' })
   // await versionBump()
