@@ -11,5 +11,5 @@ export function getDirname() {
 }
 
 export function install(name: string) {
-  execSync('pnpm i', { stdio: 'inherit', cwd: resolve(process.cwd(), name) })
+  execSync('npm run init', { stdio: 'inherit', cwd: resolve(process.cwd(), name) })
 }
