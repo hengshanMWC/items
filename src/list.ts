@@ -7,4 +7,8 @@ export const templateList = [
     name: 'monorepo',
     address: 'https://github.com/hengshanMWC/monorepo-template.git',
   },
+  {
+    name: 'vue-nest',
+    address: 'https://github.com/hengshanMWC/vue-nest.git',
+  },
 ] as const
