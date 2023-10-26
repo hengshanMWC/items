@@ -1,6 +1,6 @@
 export const templateList = [
   {
-    name: 'item',
+    name: 'package',
     address: 'https://github.com/hengshanMWC/item-template.git',
   },
   {
@@ -10,5 +10,9 @@ export const templateList = [
   {
     name: 'vue-nest',
     address: 'https://github.com/hengshanMWC/vue-nest.git',
+  },
+  {
+    name: 'taro-react',
+    address: 'https://github.com/hengshanMWC/taro-react',
   },
 ] as const
