@@ -26,7 +26,8 @@
     "release": "esno ./scripts/release",
     "build": "webpack --config ./webpack.config.js",
     "lint": "eslint --ext=js,ts,json,md,tsx .",
-    "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx ."
+    "lint:fix": "eslint --fix --ext=js,ts,json,md,tsx .",
+    "test:bin": "node ./bin/index.js create"
   },
   "devDependencies": {
     "@abmao/pkgs": "^2.2.1",
