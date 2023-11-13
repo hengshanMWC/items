@@ -8,6 +8,10 @@ export const templateList = [
     address: 'https://github.com/hengshanMWC/monorepo-template.git',
   },
   {
+    name: 'react-template',
+    address: 'https://github.com/hengshanMWC/react-template',
+  },
+  {
     name: 'vue-nest',
     address: 'https://github.com/hengshanMWC/vue-nest.git',
   },
